@@ -13,7 +13,8 @@
       <tr>
         <td><%= player.first_name %></td>
         <td><%= player.last_name %></td>
-        <td><a href="/players/<%= player.id %>">Show</a>
+        <td><a href="/players/<%= player.id %>">Show</a> |
+        <td><a href="/players/<%= player.id %>>/edit">Edit</a>
       </tr>
     <% end %>  
   </tbody>

@@ -1,0 +1,18 @@
+<h1>Here is a template to edit the player information</h1>
+
+<p>Edit: <%= @player.first_name%> information</p>
+
+<form  action="/players" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <p>
+      <label>First Name:</label>
+      <input type="text" name="player[first_name]" value="<%= @player.first_name%>">
+    </p>
+    <p>
+      <label>Last Name:</label>
+      <input type="text" name="player[last_name]" value="<%= @player.last_name%>">
+    </p>
+    <input type="submit" value="Update">
+</form>
+
+<a href="/players">Go Back</a>
