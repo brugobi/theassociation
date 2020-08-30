@@ -8,13 +8,16 @@
       <td>Actions</td>
     </tr>
   <thead> 
-  <tbody>
+  <tbody id="body">
     <% @players.each do |player|%>
       <tr>
         <td><%= player.first_name %></td>
         <td><%= player.last_name %></td>
-        <td><a href="/players/<%= player.id %>">Show</a> |
-        <td><a href="/players/<%= player.id %>>/edit">Edit</a>
+        <td>
+          <a href="/players/<%= player.id %>">Show</a> |
+          <a href="/players/<%= player.id %>/edit">Edit</a> |
+          <span><%= link_to "Delete", players_path(player.id), data: {method: :delete, confirm: "Are you sure?" } %><span>
+        </td>  
       </tr>
     <% end %>  
   </tbody>
