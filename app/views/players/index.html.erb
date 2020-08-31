@@ -1,4 +1,6 @@
-<h1>we have <%= @players.count%> Players</h1>
+<% content_for(:title, "Players")%>
+
+<h1>we have <%= pluralize(@players.length, "player") %> </h1>
 
 <table>
   <thead>
